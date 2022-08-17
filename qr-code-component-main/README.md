@@ -5,7 +5,7 @@
 ## Welcome! 👋
 
 ## Own Version of this Project
-![Own Version](https://github.com/Maggu407/Frontend-Mentor/qr-code-component-main/Own-Version.jpg?raw=true)
+![Own Version](./Own-Version.jpg?raw=true)
 Thanks for checking out this front-end coding challenge.
 
 [Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
