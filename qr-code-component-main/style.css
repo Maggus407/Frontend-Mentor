@@ -50,6 +50,7 @@ body{
 .info h2{
 color: hsl(218, 44%, 22%);
 font-size: 20px;
+font-weight: bold;
 margin: 0 0 15px 0;
 }
 
