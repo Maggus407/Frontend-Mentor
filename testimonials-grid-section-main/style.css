@@ -117,6 +117,12 @@
   background: white;
 }
 
+@media screen and (width < 350px) {
+  .card{
+    width: auto;
+  }
+}
+
 @media screen and (width > 1440px) {
   body{
     width: 100%;
