@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Fraunces:opsz,wght@9..144,700&family=Kanit:wght@200&family=Lobster&family=Montserrat:wght@500&family=Outfit:wght@400;700&family=Pacifico&family=Red+Hat+Display:wght@500;700;900&family=Space+Grotesk:wght@500&display=swap');
+
+/*Global Settings*/
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Space Grotesk';
+  font-size: 18px;
+  color: hsl(278, 68%, 11%);
+}
+label{
+    font-size: 13px;
+    font-weight:500;
+    letter-spacing: 2px;
+}
+
+body{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(90deg,hsla(249, 99%, 64%, 0.2), hsla(278, 94%, 30%, 0.5));
+}
+
+.container{
+  width: 375px;
+  max-width: 500px;
+  height: 700px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: hsl(0, 0%, 100%);
+  position: relative;
+}
+
+.background{
+  width: 100%;
+  height: 35%;
+  background-image: url('images/bg-main-mobile.png');
+  background-size: cover;
+  position: relative;
+}
+
+/* Back Card Design*/
+.back-card{
+  width: 75%;
+  height: 65%;
+  background-image: url("images/bg-card-back.png");
+  background-repeat: space no-repeat;
+  background-size: contain;
+  position: relative;
+  position: absolute;
+  top: 17.5%;
+  left: 20%;
+  z-index: 1;
+}
+
+#cvc-output{
+  width: 75%;
+  height: 15%;
+  font-size: 10px;
+  color: white;
+  border: none;
+  background: transparent;
+  text-align: right;
+  border-radius: 0;
+  position: absolute;
+  left: 10%;
+  top: 44%;
+}
+
+/* Front Card Designs */
+.front-card{
+  width: 75%;
+  height: 65%;
+  background-image: url("images/bg-card-front.png");
+  background-size: contain;
+  background-repeat: space no-repeat;
+  display: flex;
+  flex-direction:column;
+  position: absolute;
+  top: 53%;
+  left: 5%;
+  z-index: 2;
+}
+
+.last-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 1em 0 1em;
+}
+
+.front-card img{
+  width: 21%;
+  margin: 1em;
+}
+
+.card-number{
+  margin: 1em;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.card-name, .date-output{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+/*Form design*/
+form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  margin-top:4.5em;
+}
+
+.input-group-last{
+  display: flex;
+  flex-direction: row;
+  width: 87%;
+  gap: 0.8em;
+}
+
+.input-group{
+  width: 87%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+}
+
+.msg{
+  display: none;
+}
+
+input{
+  width: 100%;
+  padding: 0.6em;
+  border-radius: 10px;
+  outline:none;
+  border: 1px solid  hsl(270, 3%, 87%);
+}
+
+/*Accept Status*/
+.accepted{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin-top: 5em;
+}
+
+.accepted img{
+  margin-bottom: 1em;
+}
+
+.accepted h1{
+  font-size: 30px;
+  letter-spacing: 2px;
+  font-weight: lighter;
+}
+
+.accepted h2{
+  margin-bottom: 1em;
+  font-weight: lighter;
+  color: hsl(279, 6%, 55%);
+}
+
+/*How to do round border with Gradient https://www.youtube.com/watch?v=RM3-IMRIEB4*/
+input:focus{
+  outline:none;
+  background: linear-gradient(white, white) padding-box,
+  linear-gradient(90deg,hsl(249, 99%, 64%), hsl(278, 94%, 30%)) border-box;
+  border-width: 1px;
+  border-style:solid;
+  border-color:transparent;
+  border-radius: 10px;
+}
+
+.mmyy{
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  gap: 0.5em;
+  width: 100%;
+}
+
+.cvc-input{
+  width: 150%;
+  gap: 0.4em;
+}
+
+/*Button*/
+button{
+  width:87%;
+  height: auto;
+  background-color: hsl(278, 68%, 11%);
+  border-radius: 10px;
+  border:none;
+  color: white;
+  padding: 0.9em;
+  margin: 0.5em 0 0 0;
+}
+
+button:hover{
+  background-color: hsl(278, 94%, 30%);
+}
+
+@media screen and (width > 1400px) {
+  .container{
+    width: 1350px;
+    max-width: 1400px;
+    height: 850px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .background{
+    width: 460px;
+    max-width: 460px;
+    height: 100%;
+    background-image: url('images/bg-main-desktop.png');
+    background-size: cover;
+    position: relative;
+  }
+
+  form{
+    width:450px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    margin-left:300px;
+  }
+
+  .front-card{
+    width: 100%;
+    height: 230px;
+
+    top: 22%;
+    left: 35%;
+    z-index: 2;
+  }
+
+  .last-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 0 0 1.5em;
+  }
+
+  .front-card img{
+    width: 17%;
+    margin: 1em 1em 3em 1em;
+  }
+
+  .card-number{
+    width: 80%;
+    margin: 0em 1em 1em 1em;
+    color: white;
+    letter-spacing: 3px;
+    font-size: 25px;
+  }
+
+  .card-name, .date-output{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+
+  .back-card{
+    width: 100%;
+    height: 230px;
+
+    top: 55%;
+    left:53%;
+    z-index: 1;
+  }
+
+  #cvc-output{
+    width: 75%;
+    height: 15%;
+    font-size: 15px;
+    color: white;
+    border: none;
+    background: transparent;
+    text-align: right;
+    border-radius: 0;
+    position: absolute;
+    letter-spacing: 1px;
+    left: 5%;
+    top: 44.5%;
+  }
+
+  /*Accept Status*/
+  .accepted{
+    margin-top:0;
+    width:450px;
+    height: 500px;
+    margin-left:300px;
+  }
+}

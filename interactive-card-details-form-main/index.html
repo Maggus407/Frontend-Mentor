@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+<body>
+  <div class="container" onload="default()">
+    <!-- background  -->
+    <div class="background">
+      <!-- Back Card  -->
+      <div class="back-card">
+        <div type="text" class="back-card-output" id="cvc-output">000</div>
+      </div>
+      <!-- Front Card  -->
+      <div class="front-card">
+        <img src="images/card-logo.svg" alt="card-logo">
+        <span class="card-number" id="card-number">0000 0000 0000 0000</span>
+        <div class="last-row">
+          <span class="card-name" id="user-name">Jane Appleseed</span>
+          <span class="date-output" id="date-output">00/00</span>
+        </div>
+      </div>
+    </div>
+    <!-- Form with Inputs -->
+    <form class="card-infos" id="card-infos" >
+      <!-- Name Input -->
+      <div class="input-group">
+        <label for="name">CARDHOLDER NAME</label>
+        <input title="Please fill out your Name!" type="text" pattern="[a-zA-Z\s]{1,}" name="name" id="name" placeholder="e.g Jane Appleseed" required>
+      </div>
+      <!-- Number Input -->
+      <div class="input-group">
+        <label for="number">CARD NUMBER</label>
+        <input type="text" title="It must be a sixteen digit number!" name="number" id="number" pattern="[0-9]{16}" placeholder="e.g 1234 5678 9123 0000" required>
+      </div>
+      <div class="input-group-last">
+        <!-- Date MM/YY Input -->
+        <div class="date-input">
+          <label for="month">EXP. DATE (MM/YY)</label>
+          <div class="mmyy">
+            <input type="text" title="Number between 1 and 12" pattern="(0[1-9]|1[012])" name="month" id="month" placeholder="MM" required>
+            <input type="text" pattern="[0-9]{4}" name="year" id="year" placeholder="YY" required>
+          </div>
+        </div>
+        <!-- CVC Input -->
+        <div class="cvc-input">
+          <label for="cvc">CVC</label>
+          <input type="text" title="It must be a three digit Number!" pattern="[0-9]{3}" name="cvc" id="cvc" placeholder="e.g 123" required>
+        </div>
+      </div>
+      <!-- Submit Button -->
+      <button type="submit" onclick="get_infos()" name="button">Confirm</button>
+    </form>
+    <div class="accepted" id="accepted">
+      <img src="images/icon-complete.svg" alt="">
+      <h1>THANK YOU!</h1>
+      <h2>We've added your card details</h2>
+      <button type="button" name="button">Continue</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
